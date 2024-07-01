@@ -19,7 +19,7 @@ Once the simulation is finished, you can utilize the [02_SimScale-Valispace_batt
 * Feed the simulation results back to Valispace by updating the _Valis_
 * Update an Analysis Report in Valispace w/ new screenshots
 
-A sample project were those scripts can be applied is the following
+A sample project where those scripts can be applied is the following
 https://www.simscale.com/projects/itsavlidis_api/webinar-_battery_pack_cooling_-_design_study_-_valispace/
 
 >[!TIP]
