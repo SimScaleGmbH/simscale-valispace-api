@@ -3,7 +3,7 @@ This repository hosts the API python scripts used for the joint SimScale & Valis
 
 ## Available files and workflow
 
-There are two example script files provided
+There are two example script files provided 
 
 You can use the [01_SimScale-Valispace_batteryPack_runSimulation_doc.py](https://github.com/SimScaleGmbH/simscale-valispace-api/blob/master/01_SimScale-Valispace_batteryPack_runSimulation_doc.py) to see how to:
 
@@ -46,4 +46,4 @@ https://www.simscale.com/product/integrations-partners/valispace/
 ## Requirements
 * SimScale Professional license
 * SimScale API key
-* Valispace Pro or Enterprise license
+* Valispace license
