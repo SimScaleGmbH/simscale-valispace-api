@@ -1,3 +1,5 @@
+This repository has been archived on 14/4/2026
+
 # Short Description
 This repository hosts the API python scripts used for the joint SimScale & Valispace webinar.
 
