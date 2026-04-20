@@ -37,7 +37,6 @@ from .settings import simscale_key
 from .settings import Username, Password
 
 deployment = "simscale"
-valispace = valispace.API(url=f'https://{deployment}.valispace.com', username=Username, password=Password)
 projectId = 21
 
 # This is the function used to massively upload created images to the Analysis report
@@ -117,8 +116,8 @@ def main(**kwargs) -> Dict[str, Any]:
     #materials_api = MaterialsApi(api_client)
 
 
-    
-
+    #****** VALISPACE INITIALIZE API **********
+    valispace = valispace.API(url=f'https://{deployment}.valispace.com', session_token=kwargs['temporary_access_token']) 
 
 
     #******** Set SimScale project, geometry, meshing ID. *************************

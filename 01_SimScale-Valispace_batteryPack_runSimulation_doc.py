@@ -79,17 +79,17 @@ def main(**kwargs) -> Dict[str, Any]:
     #materials_api = MaterialsApi(api_client)
 
 
-
+    valispace_api = valispace.API(url="https://simscale.valispace.com/",session_token=kwargs['temporary_access_token'])
 
     #****** VALISPACE GET VALUES **********
 
     #Get Power, Flow rate and Material values from valispace
     cellPower_vali_ID = 12921
-    cellPower  = valispace.API(url="https://simscale.valispace.com/",username=Username,password=Password).get(f"valis/{cellPower_vali_ID}")
+    cellPower  = valispace_api.get(f"valis/{cellPower_vali_ID}")
     cellPower_value = cellPower['value']
 
     massFlowRate_vali_ID = 12922
-    massFlowRate = valispace.API(url="https://simscale.valispace.com/",username=Username,password=Password).get(f"valis/{massFlowRate_vali_ID}") 
+    massFlowRate = valispace_api.get(f"valis/{massFlowRate_vali_ID}") 
     massFlowRate_value = massFlowRate['value']
 
     materialName_vali_ID = 105
@@ -97,10 +97,10 @@ def main(**kwargs) -> Dict[str, Any]:
     materialDensity_vali_ID = 12946
     materialViscosity_vali_ID = 12947
 
-    [materialName, materialCP, materialDensity, materialViscosity] = [valispace.API(url="https://simscale.valispace.com/",username=Username,password=Password).get(f"textvalis/{materialName_vali_ID}"), 
-                                                    valispace.API(url="https://simscale.valispace.com/",username=Username,password=Password).get(f"valis/{materialCp_vali_ID}"), 
-                                                    valispace.API(url="https://simscale.valispace.com/",username=Username,password=Password).get(f"valis/{materialDensity_vali_ID}"), 
-                                                    valispace.API(url="https://simscale.valispace.com/",username=Username,password=Password).get(f"valis/{materialViscosity_vali_ID}") ]
+    [materialName, materialCP, materialDensity, materialViscosity] = [valispace_api.get(f"textvalis/{materialName_vali_ID}"), 
+                                                    valispace_api.get(f"valis/{materialCp_vali_ID}"), 
+                                                    valispace_api.get(f"valis/{materialDensity_vali_ID}"), 
+                                                    valispace_api.get(f"valis/{materialViscosity_vali_ID}") ]
     [materialName_value, materialCp_value, materialDensity_value, materialViscosity_value] = [materialName['text'], materialCP['value'], materialDensity['value'], materialViscosity['value']]
     #****** VALISPACE GET VALUES END **********
 
